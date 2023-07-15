@@ -6,7 +6,7 @@ actor DBank{
 
 
   public func topUp(){
-    currentvalue+=1;
+    currentvalue+=2;
     Debug.print(debug_show(currentvalue));
   };
 }
