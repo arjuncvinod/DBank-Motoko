@@ -1,7 +1,7 @@
 import Debug "mo:base/Debug";
 actor DBank{
   var currentvalue=300;
-  currentvalue:=100;
+  currentvalue:=200;
   let id=4572853543753754;
 
 
@@ -9,6 +9,4 @@ actor DBank{
     currentvalue+=1;
     Debug.print(debug_show(currentvalue));
   };
-
-  
 }
