@@ -13,10 +13,10 @@ document.querySelector("form").addEventListener("submit", async (event)=>{
   const outputAmount=parseFloat(document.getElementById("withdrawal-amount").value)
 
   // console.log(inputAmount,outputAmount);
-  if(inputAmount!=NaN){
+  if (!isNaN(inputAmount)) {
   await DBank_backend.topUp(inputAmount)
   }
-   if(outputAmount!=NaN){
+   if (!isNaN(outputAmount)) {
   await DBank_backend.withdraw(outputAmount)
    }
 
