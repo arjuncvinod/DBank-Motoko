@@ -3,10 +3,10 @@ import Nat "mo:base/Nat";
 import Time "mo:base/Time";
 import Float "mo:base/Float";
 actor DBank{
-stable var currentvalue:Float=300;
+var currentvalue:Float=2000;
   // currentvalue:=400;
   let id=4572853543753754;
-  stable var startTime=Time.now();
+  var startTime=Time.now();
  Debug.print(debug_show(startTime));
 
 
