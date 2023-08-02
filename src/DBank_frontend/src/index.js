@@ -13,12 +13,15 @@ document.querySelector("form").addEventListener("submit", async (event)=>{
   const outputAmount=parseFloat(document.getElementById("withdrawal-amount").value)
 
   // console.log(inputAmount,outputAmount);
-  if(inputAmount!=NaN){
+  if (!isNaN(inputAmount)) {
   await DBank_backend.topUp(inputAmount)
+  document.getElementById("input-amount").value=""
   }
-   if(outputAmount!=NaN){
+   if (!isNaN(outputAmount)) {
   await DBank_backend.withdraw(outputAmount)
+  document.getElementById("withdrawal-amount").value=""
    }
+
 
 const currentAmount= await DBank_backend.checkBalance();
   document.getElementById("value").innerText=currentAmount 
