@@ -22,7 +22,9 @@ document.querySelector("form").addEventListener("submit", async (event)=>{
   document.getElementById("withdrawal-amount").value=""
    }
 
+   await DBank_backend.compound();
 
 const currentAmount= await DBank_backend.checkBalance();
-  document.getElementById("value").innerText=currentAmount 
+  document.getElementById("value").innerText=Math.round(currentAmount*100) / 100;
+
 })
